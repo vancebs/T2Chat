@@ -3,12 +3,11 @@
 
     <dimen name="fragment_bot_list_padding">10dp</dimen>
 
-    <dimen name="conversation_item_padding_start">5dp</dimen>
-    <dimen name="conversation_item_padding_end">50dp</dimen>
-    <dimen name="conversation_item_padding_top">5dp</dimen>
-    <dimen name="conversation_item_padding_bottom">5dp</dimen>
+    <dimen name="conversation_item_padding">5dp</dimen>
+    <dimen name="conversation_item_message_padding">5dp</dimen>
+    <dimen name="conversation_item_message_margin_end">50dp</dimen>
 
     <dimen name="conversation_item_triangle_size">10dp</dimen>
 
-    <dimen name="conversation_item_message_padding">5dp</dimen>
+    <dimen name="conversation_item_message_bg_corner">5dp</dimen>
 </resources>

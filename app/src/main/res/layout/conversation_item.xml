@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="@dimen/conversation_item_padding_start"
-    android:paddingEnd="@dimen/conversation_item_padding_end"
-    android:paddingTop="@dimen/conversation_item_padding_top"
-    android:paddingBottom="@dimen/conversation_item_padding_bottom"
+    android:padding="@dimen/conversation_item_padding"
     android:orientation="horizontal">
-
-    <com.t2m.t2chat.view.TriangleView
-        android:id="@+id/triangle"
-        android:layout_width="@dimen/conversation_item_triangle_size"
-        android:layout_height="@dimen/conversation_item_triangle_size" />
-    
-    <TextView
+    <com.t2m.t2chat.view.ChatItemView
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/conversation_item_message_padding" />
-
+        android:padding="@dimen/conversation_item_message_padding"
+        android:layout_marginEnd="@dimen/conversation_item_message_margin_end" />
 </LinearLayout>

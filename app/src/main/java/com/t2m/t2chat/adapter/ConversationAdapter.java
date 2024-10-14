@@ -12,7 +12,7 @@ import io.noties.markwon.Markwon;
 
 import com.t2m.t2chat.R;
 import com.t2m.t2chat.agent.Agent;
-import com.t2m.t2chat.view.TriangleView;
+import com.t2m.t2chat.view.ChatItemView;
 
 
 public class ConversationAdapter extends BaseAdapter implements Agent.Conversation.OnUpdateListener {
@@ -47,7 +47,6 @@ public class ConversationAdapter extends BaseAdapter implements Agent.Conversati
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             view = inflater.inflate(R.layout.conversation_item, null);
-
         } else {
             view = convertView;
         }
@@ -68,21 +67,16 @@ public class ConversationAdapter extends BaseAdapter implements Agent.Conversati
     }
 
     private void bindItemView(View view, Agent.Conversation.Item item) {
-        LinearLayout itemView = (LinearLayout) view;
-        TriangleView triangleView = view.findViewById(R.id.triangle);
-        TextView messageView = view.findViewById(R.id.message);
-        if (item.role.equals("user")) {
-            itemView.setLayoutDirection(LinearLayout.LAYOUT_DIRECTION_RTL);
-            triangleView.setColorRes(R.color.conversation_item_user_bg);
-            triangleView.setMirror(true);
-            messageView.setBackgroundResource(R.color.conversation_item_user_bg);
-        } else {
-            itemView.setLayoutDirection(LinearLayout.LAYOUT_DIRECTION_LTR);
-            triangleView.setColorRes(R.color.conversation_item_bot_bg);
-            triangleView.setMirror(false);
-            messageView.setBackgroundResource(R.color.conversation_item_bot_bg);
-        }
+        LinearLayout rootView = view.findViewById(R.id.root);
+        ChatItemView messageView = view.findViewById(R.id.message);
 
+        if (item.role.equals("user")) {
+            rootView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            messageView.setItemBackgroundColorResource(R.color.conversation_item_user_bg);
+        } else {
+            rootView.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+            messageView.setItemBackgroundColorResource(R.color.conversation_item_bot_bg);
+        }
         setMarkdown(messageView, item.content);
     }
 
