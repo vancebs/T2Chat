@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/BotListFragment">
+
+    <fragment
+        android:id="@+id/BotListFragment"
+        android:name="com.t2m.t2chat.fragment.BotListFragment"
+        android:label="@string/bot_list_fragment_label"
+        tools:layout="@layout/fragment_bot_list">
+
+        <action
+            android:id="@+id/action_BotListFragment_to_CookbookBotChatFragment"
+            app:destination="@id/CookbookBotChatFragment" />
+        <action
+            android:id="@+id/action_BotListFragment_to_CookbookBot3BChatFragment"
+            app:destination="@id/CookbookBot3BChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CookbookBotChatFragment"
+        android:name="com.t2m.t2chat.fragment.CookbookBotChatFragment"
+        android:label="@string/cookbook_bot_fragment_label"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_CookbookBotChatFragment_to_BotListFragment"
+            app:destination="@id/BotListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CookbookBot3BChatFragment"
+        android:name="com.t2m.t2chat.fragment.CookbookBotChat3BFragment"
+        android:label="@string/cookbook_bot_3b_fragment_label"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_CookbookBot3BChatFragment_to_BotListFragment"
+            app:destination="@id/BotListFragment" />
+    </fragment>
+</navigation>

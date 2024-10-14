@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">T2Chat</string>
+    <string name="btn_send">Send</string>
+    <string name="input_message_hint">"i.e. Who're you?"</string>
+
+    <string name="btn_cookbook_bot">Cookbook Bot</string>
+    <string name="btn_cookbook_bot_3b">Cookbook Bot (3B)</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="bot_list_fragment_label">Bot List</string>
+    <string name="cookbook_bot_fragment_label">Cookbook Bot</string>
+    <string name="cookbook_bot_3b_fragment_label">Cookbook Bot (3B)</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+</resources>
