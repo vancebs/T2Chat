@@ -13,6 +13,8 @@ import androidx.annotation.Nullable;
 
 import com.t2m.t2chat.R;
 
+import io.noties.markwon.Markwon;
+
 public class ChatItemView extends androidx.appcompat.widget.AppCompatTextView {
     private static final String TAG = ChatItemView.class.getSimpleName();
 
@@ -25,6 +27,8 @@ public class ChatItemView extends androidx.appcompat.widget.AppCompatTextView {
     private int mLastLayoutDirection = LAYOUT_DIRECTION_LTR;
     private int mLastWidth = -1;
     private int mLastHeight = -1;
+
+    private Markwon mMarkwon = null;
 
     public ChatItemView(@NonNull Context context) {
         super(context, null, 0);
@@ -58,6 +62,13 @@ public class ChatItemView extends androidx.appcompat.widget.AppCompatTextView {
 
     public void setItemBackgroundColorResource(int resId) {
         setItemBackgroundColor(getResources().getColor(resId, getContext().getTheme()));
+    }
+
+    public void setMarkdownText(String text) {
+        if (mMarkwon == null) {
+            mMarkwon = Markwon.create(getContext());
+        }
+        mMarkwon.setMarkdown(this, text);
     }
 
     @Override

@@ -6,9 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import io.noties.markwon.Markwon;
 
 import com.t2m.t2chat.R;
 import com.t2m.t2chat.agent.Agent;
@@ -18,7 +15,6 @@ import com.t2m.t2chat.view.ChatItemView;
 public class ConversationAdapter extends BaseAdapter implements Agent.Conversation.OnUpdateListener {
     private final Agent.Conversation mConversation;
     private final Handler mHandler = new Handler();
-    private Markwon mMarkwon = null;
 
     public ConversationAdapter(Agent.Conversation conversation) {
         mConversation = conversation;
@@ -77,13 +73,6 @@ public class ConversationAdapter extends BaseAdapter implements Agent.Conversati
             rootView.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
             messageView.setItemBackgroundColorResource(R.color.conversation_item_bot_bg);
         }
-        setMarkdown(messageView, item.content);
-    }
-
-    private void setMarkdown(TextView view, String text) {
-        if (mMarkwon == null) {
-            mMarkwon = Markwon.create(view.getContext().getApplicationContext());
-        }
-        mMarkwon.setMarkdown(view, text);
+        messageView.setMarkdownText(item.content);
     }
 }
