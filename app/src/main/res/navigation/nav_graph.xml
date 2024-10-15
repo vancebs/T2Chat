@@ -12,30 +12,56 @@
         tools:layout="@layout/fragment_bot_list">
 
         <action
-            android:id="@+id/action_BotListFragment_to_CookbookBotChatFragment"
-            app:destination="@id/CookbookBotChatFragment" />
+            android:id="@+id/action_BotListFragment_to_CookbookBotLlama8BChatFragment"
+            app:destination="@id/CookbookBotLlama8BChatFragment" />
         <action
-            android:id="@+id/action_BotListFragment_to_CookbookBot3BChatFragment"
-            app:destination="@id/CookbookBot3BChatFragment" />
+            android:id="@+id/action_BotListFragment_to_CookbookBotLlama3BChatFragment"
+            app:destination="@id/CookbookBotLlama3BChatFragment" />
+        <action
+            android:id="@+id/action_BotListFragment_to_CookbookBotQwen0_5BChatFragment"
+            app:destination="@id/CookbookBotQwen0_5BChatFragment" />
+        <action
+            android:id="@+id/action_BotListFragment_to_CookbookBotQwen1_5BChatFragment"
+            app:destination="@id/CookbookBotQwen1_5BChatFragment" />
     </fragment>
     <fragment
-        android:id="@+id/CookbookBotChatFragment"
-        android:name="com.t2m.t2chat.fragment.CookbookBotChatFragment"
+        android:id="@+id/CookbookBotLlama8BChatFragment"
+        android:name="com.t2m.t2chat.fragment.CookbookBotLlama8BChatFragment"
         android:label="@string/cookbook_bot_fragment_label"
         tools:layout="@layout/fragment_chat">
 
         <action
-            android:id="@+id/action_CookbookBotChatFragment_to_BotListFragment"
+            android:id="@+id/action_CookbookBotLlama8BChatFragment_to_BotListFragment"
             app:destination="@id/BotListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/CookbookBot3BChatFragment"
-        android:name="com.t2m.t2chat.fragment.CookbookBotChat3BFragment"
+        android:id="@+id/CookbookBotLlama3BChatFragment"
+        android:name="com.t2m.t2chat.fragment.CookbookBotLlama3BChatFragment"
         android:label="@string/cookbook_bot_3b_fragment_label"
         tools:layout="@layout/fragment_chat">
 
         <action
-            android:id="@+id/action_CookbookBot3BChatFragment_to_BotListFragment"
+            android:id="@+id/action_CookbookBotLlama3BChatFragment_to_BotListFragment"
+            app:destination="@id/BotListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CookbookBotQwen0_5BChatFragment"
+        android:name="com.t2m.t2chat.fragment.CookbookBotQwen0_5BChatFragment"
+        android:label="@string/cookbook_bot_qwen_0_5b_fragment_label"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_CookbookBotQwen0_5BChatFragment_to_BotListFragment"
+            app:destination="@id/BotListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CookbookBotQwen1_5BChatFragment"
+        android:name="com.t2m.t2chat.fragment.CookbookBotQwen1_5BChatFragment"
+        android:label="@string/cookbook_bot_qwen_1_5b_fragment_label"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_CookbookBotQwen1_5BChatFragment_to_BotListFragment"
             app:destination="@id/BotListFragment" />
     </fragment>
 </navigation>

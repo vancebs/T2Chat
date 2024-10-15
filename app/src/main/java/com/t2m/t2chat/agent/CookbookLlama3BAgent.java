@@ -1,7 +1,7 @@
 package com.t2m.t2chat.agent;
 
-public class Cookbook3BAgent extends OllamaAgent {
-    public Cookbook3BAgent() {
+public class CookbookLlama3BAgent extends OllamaAgent {
+    public CookbookLlama3BAgent() {
         super(
                 "http://192.168.100.100:11434/api/chat",
                 "llama3.2:3b",

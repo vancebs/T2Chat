@@ -1,10 +1,10 @@
 package com.t2m.t2chat.agent;
 
-public class CookbookAgent extends OllamaAgent {
-    public CookbookAgent() {
+public class CookbookQwen0_5BAgent extends OllamaAgent {
+    public CookbookQwen0_5BAgent() {
         super(
-                "http://192.168.100.100:11434/api/chat",
-                "llama3.1:8b",
+                "http://127.0.0.1:11434/api/chat",
+                "qwen2.5:0.5b",
                 "You knows cookbook well. People always ask you the steps before cooking." +
                         " You tell them steps in brief. Steps including what food to prepare?" +
                         " How to deal with the food? How long should wait for food ready? Where to" +

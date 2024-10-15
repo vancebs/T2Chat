@@ -31,11 +31,19 @@ public class BotListFragment extends Fragment {
 
         binding.btnCookbookBot.setOnClickListener((v) -> {
             NavHostFragment.findNavController(BotListFragment.this)
-                    .navigate(R.id.action_BotListFragment_to_CookbookBotChatFragment);
+                    .navigate(R.id.action_BotListFragment_to_CookbookBotLlama8BChatFragment);
         });
         binding.btnCookbookBot3b.setOnClickListener((v) -> {
             NavHostFragment.findNavController(BotListFragment.this)
-                    .navigate(R.id.action_BotListFragment_to_CookbookBot3BChatFragment);
+                    .navigate(R.id.action_BotListFragment_to_CookbookBotLlama3BChatFragment);
+        });
+        binding.btnCookbookBotQwen05b.setOnClickListener((v) -> {
+            NavHostFragment.findNavController(BotListFragment.this)
+                    .navigate(R.id.action_BotListFragment_to_CookbookBotQwen0_5BChatFragment);
+        });
+        binding.btnCookbookBotQwen15b.setOnClickListener((v) -> {
+            NavHostFragment.findNavController(BotListFragment.this)
+                    .navigate(R.id.action_BotListFragment_to_CookbookBotQwen1_5BChatFragment);
         });
     }
 

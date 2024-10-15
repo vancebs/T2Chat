@@ -1,17 +1,16 @@
 package com.t2m.t2chat.fragment;
 
 import com.t2m.t2chat.agent.Agent;
-import com.t2m.t2chat.agent.Cookbook3BAgent;
+import com.t2m.t2chat.agent.CookbookQwen1_5BAgent;
 
-public class CookbookBotChat3BFragment extends ChatFragment {
+public class CookbookBotQwen1_5BChatFragment extends ChatFragment {
     private Agent mAgent = null;
 
     @Override
     protected Agent getAgent() {
         if (mAgent == null) {
-            mAgent = new Cookbook3BAgent();
+            mAgent = new CookbookQwen1_5BAgent();
         }
         return mAgent;
     }
-
 }

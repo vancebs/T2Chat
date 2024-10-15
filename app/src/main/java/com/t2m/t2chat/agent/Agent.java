@@ -18,7 +18,7 @@ public abstract class Agent {
     public static abstract class Conversation {
         private OnUpdateListener mOnUpdateListener = null;
 
-        private static final long UPDATE_INTERVAL_MS = 100;
+        private static final long UPDATE_INTERVAL_MS = 50;
         private long mLastUpdatedTimeMs = 0;
 
         public void setOnUpdateListener(OnUpdateListener listener) {
