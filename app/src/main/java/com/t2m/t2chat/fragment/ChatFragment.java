@@ -18,9 +18,7 @@ public abstract class ChatFragment extends Fragment {
     public static final String TAG = ChatFragment.class.getSimpleName();
 
     protected FragmentChatBinding binding;
-
-    private final Handler mHandler = new Handler();
-
+    
     private Agent.Conversation mConversation;
 
     @Override
